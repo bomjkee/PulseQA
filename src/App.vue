@@ -374,7 +374,7 @@ export default {
     })
 
     return {
-      user,`
+      user,
       currentView,
       navItems,
       metrics,

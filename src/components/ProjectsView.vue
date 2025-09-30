@@ -681,18 +681,27 @@ export default {
   opacity: 0;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 480px) {
   .panel-header {
     flex-direction: column;
     align-items: flex-start;
+    padding: 0.7rem 0.3rem;
   }
-
   .portfolio {
     grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0.2rem;
   }
-
+  .project-card {
+    padding: 0.7rem 0.4rem;
+    font-size: 0.97rem;
+  }
   .project-details {
     grid-template-columns: 1fr;
+    padding: 0.5rem 0.2rem;
   }
-}
+  .card {
+    padding: 0.7rem 0.4rem;
+  }
+
 </style>

@@ -676,10 +676,28 @@ export default {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .panel-header {
     flex-direction: column;
     align-items: flex-start;
+    padding: 0.7rem 0.3rem;
+  }
+  .summary-grid, .charts {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0.2rem;
+  }
+  .card {
+    padding: 0.7rem 0.4rem;
+    font-size: 0.97rem;
+  }
+  .timeline {
+    gap: 0.5rem;
+  }
+  .risk-list li {
+    padding: 0.5rem 0.2rem;
+    font-size: 0.95rem;
   }
 }
+
 </style>

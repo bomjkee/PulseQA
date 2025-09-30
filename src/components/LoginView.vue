@@ -297,9 +297,21 @@ button[type="submit"]:disabled {
   color: rgba(148, 163, 184, 0.7);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .login-panel {
-    padding: 2rem 1.5rem;
+    padding: 1rem 0.5rem;
+  }
+  .login-form .field input {
+    font-size: 1rem;
+    padding: 0.6rem 0.7rem;
+  }
+  .quick-buttons button {
+    padding: 0.6rem 0.7rem;
+    font-size: 0.97rem;
+  }
+  .error {
+    font-size: 0.97rem;
+    padding: 0.5rem 0.7rem;
   }
 }
 </style>

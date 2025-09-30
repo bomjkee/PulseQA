@@ -4,7 +4,7 @@
       <section class="landing-intro">
         <h1>Pulse QA Control</h1>
         <p>
-          Новая панель управления качеством строительства: визуальный контроль дефектов,
+          Панель управления качеством строительства: визуальный контроль дефектов,
           управление объектами и аналитика без сервера и сложной настройки.
         </p>
         <ul>
@@ -22,7 +22,6 @@
           <span class="brand-icon">⛏️</span>
           <div>
             <strong>Pulse QA</strong>
-            <small>контроль качества</small>
           </div>
         </div>
 
@@ -34,7 +33,6 @@
               <p class="user-role">{{ getRoleTitle(user.role) }}</p>
             </div>
           </div>
-          <p class="user-message">{{ greeting }}</p>
         </div>
 
         <nav class="sidebar-nav">
@@ -232,14 +230,6 @@ export default {
         .join('')
     })
 
-    const greeting = computed(() => {
-      const hours = new Date().getHours()
-      if (hours < 11) return 'Доброе утро!'
-      if (hours < 17) return 'Добрый день!'
-      if (hours < 23) return 'Добрый вечер!'
-      return 'На связи ночью — будьте осторожны!' 
-    })
-
     const currentTitle = computed(() => {
       const titles = {
         overview: 'Обзор качества',
@@ -384,7 +374,7 @@ export default {
     })
 
     return {
-      user,
+      user,`
       currentView,
       navItems,
       metrics,
@@ -393,7 +383,6 @@ export default {
       handleLogin,
       logout,
       refreshMetrics,
-      greeting,
       initials,
       currentTitle,
       lastSyncLabel
@@ -874,18 +863,45 @@ body {
   }
 }
 
-@media (max-width: 640px) {
+</style>
+
+/* --- Мобильная адаптация --- */
+@media (max-width: 480px) {
   .app-root {
-    padding: 1rem;
+    padding: 0.5rem;
   }
-
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+  .app-sidebar {
+    min-width: 0;
+    padding: 0.5rem 0.2rem;
+    gap: 0.5rem;
+  }
+  .sidebar-user {
+    gap: 0.5rem;
+  }
+  .user-badge .avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  .nav-item {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.85rem;
+    gap: 0.5rem;
+  }
+  .logout {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.9rem;
+  }
   .top-bar {
+    padding: 1rem 0.5rem 0.7rem;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.7rem;
   }
-
-  .pulse-card.highlight {
-    grid-column: span 1;
+  .view-area {
+    padding: 0 0.5rem 1rem;
   }
 }
 </style>

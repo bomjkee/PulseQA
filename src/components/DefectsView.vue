@@ -1111,7 +1111,32 @@ export default {
   opacity: 0;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 480px) {
+  .panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.7rem 0.3rem;
+  }
+  .header-actions {
+    gap: 0.4rem;
+    padding: 0.2rem 0;
+  }
+  .quick-stats {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .filters {
+    padding: 0.5rem 0.2rem;
+  }
+  .field input, .field select {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.7rem;
+  }
+  .stat {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.2rem;
+  }
+}
   .panel-header {
     flex-direction: column;
     align-items: flex-start;

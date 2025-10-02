@@ -703,5 +703,5 @@ export default {
   .card {
     padding: 0.7rem 0.4rem;
   }
-
+}
 </style>

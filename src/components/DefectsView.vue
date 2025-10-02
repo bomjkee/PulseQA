@@ -1136,7 +1136,7 @@ export default {
     font-size: 0.95rem;
     padding: 0.5rem 0.2rem;
   }
-}
+
   .panel-header {
     flex-direction: column;
     align-items: flex-start;

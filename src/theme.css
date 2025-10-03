@@ -1,0 +1,213 @@
+/* Theme CSS Variables */
+:root {
+  --transition: all 0.3s ease;
+}
+
+/* Dark Theme (default) */
+:root,
+[data-theme="dark"] {
+  /* Backgrounds */
+  --bg-gradient-start: #1f2a40;
+  --bg-gradient-mid: #0f1729;
+  --bg-gradient-end: #05070c;
+  
+  /* Text Colors */
+  --text-primary: #f6f7fb;
+  --text-secondary: rgba(226, 232, 240, 0.86);
+  --text-muted: rgba(148, 163, 184, 0.75);
+  --text-light: rgba(203, 213, 225, 0.82);
+  
+  /* Card & Surface */
+  --card-bg: linear-gradient(180deg, rgba(17, 24, 39, 0.65) 0%, rgba(17, 24, 39, 0.35) 100%);
+  --card-border: rgba(148, 163, 184, 0.1);
+  --card-highlight-bg: linear-gradient(145deg, rgba(37, 99, 235, 0.35) 0%, rgba(14, 116, 144, 0.25) 100%);
+  --surface-bg: rgba(15, 23, 42, 0.68);
+  --surface-border: rgba(59, 130, 246, 0.16);
+  
+  /* Sidebar & Content */
+  --sidebar-bg: linear-gradient(200deg, rgba(24, 33, 56, 0.95) 0%, rgba(12, 18, 31, 0.92) 100%);
+  --content-bg: rgba(9, 13, 22, 0.7);
+  --panel-bg: rgba(12, 19, 33, 0.75);
+  
+  /* Buttons */
+  --button-ghost-bg: rgba(96, 165, 250, 0.08);
+  --button-ghost-border: rgba(96, 165, 250, 0.25);
+  --button-ghost-text: #bfdbfe;
+  --button-ghost-hover: rgba(96, 165, 250, 0.16);
+  
+  --button-primary-bg: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
+  --button-primary-text: #0f172a;
+  --button-primary-hover-bg: linear-gradient(135deg, #0ea5e9 0%, #4f46e5 100%);
+  --button-primary-shadow: rgba(99, 102, 241, 0.35);
+  
+  --button-danger-bg: rgba(248, 113, 113, 0.15);
+  --button-danger-border: rgba(248, 113, 113, 0.4);
+  
+  /* Form Elements */
+  --input-bg: rgba(15, 23, 42, 0.65);
+  --input-border: rgba(148, 163, 184, 0.25);
+  --input-border-focus: rgba(96, 165, 250, 0.45);
+  --input-text: #f8fafc;
+  
+  /* Accents */
+  --accent-primary: #60a5fa;
+  --accent-secondary: #38bdf8;
+  --accent-success: #4ade80;
+  --accent-warning: #facc15;
+  --accent-danger: #fca5a5;
+  
+  /* Overlays */
+  --overlay-bg: rgba(2, 6, 23, 0.45);
+  --modal-bg: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.75) 100%);
+  --shell-bg: rgba(10, 16, 28, 0.82);
+  --shell-border: rgba(255, 255, 255, 0.08);
+  
+  /* Status Colors */
+  --status-new: rgba(59, 130, 246, 0.85);
+  --status-in-progress: rgba(251, 191, 36, 0.85);
+  --status-resolved: rgba(52, 211, 153, 0.85);
+  --status-closed: rgba(148, 163, 184, 0.65);
+  
+  /* Badge Backgrounds & Colors */
+  --badge-priority-high-bg: rgba(248, 113, 113, 0.18);
+  --badge-priority-medium-bg: rgba(251, 191, 36, 0.18);
+  --badge-priority-low-bg: rgba(52, 211, 153, 0.18);
+  
+  --badge-impact-low-bg: rgba(59, 130, 246, 0.12);
+  --badge-impact-low-text: #bfdbfe;
+  --badge-impact-medium-bg: rgba(251, 191, 36, 0.12);
+  --badge-impact-medium-text: #facc15;
+  --badge-impact-critical-bg: rgba(248, 113, 113, 0.18);
+  --badge-impact-critical-text: #f87171;
+  
+  --badge-status-new-bg: rgba(125, 211, 252, 0.16);
+  --badge-status-in-progress-bg: rgba(96, 165, 250, 0.16);
+  --badge-status-resolved-bg: rgba(52, 211, 153, 0.16);
+  --badge-status-closed-bg: rgba(233, 213, 255, 0.16);
+  
+  /* Pills */
+  --pill-danger-bg: rgba(248, 113, 113, 0.18);
+  --pill-warning-bg: rgba(251, 191, 36, 0.2);
+  --pill-good-bg: rgba(52, 211, 153, 0.18);
+  --pill-base-bg: rgba(148, 163, 184, 0.18);
+  
+  /* Project Badge Colors */
+  --badge-good-bg: rgba(74, 222, 128, 0.18);
+  --badge-good-text: #86efac;
+  --badge-warn-bg: rgba(250, 204, 21, 0.18);
+  --badge-warn-text: #facc15;
+  --badge-alert-bg: rgba(248, 113, 113, 0.2);
+  --badge-alert-text: #fca5a5;
+  --badge-neutral-bg: rgba(148, 163, 184, 0.18);
+  --badge-neutral-text: #cbd5f5;
+  
+  /* Additional UI Elements */
+  --progress-bar-bg: rgba(148, 163, 184, 0.2);
+  --progress-bar-fill: linear-gradient(90deg, #38bdf8 0%, #34d399 100%);
+  --chip-bg: rgba(15, 23, 42, 0.55);
+  --chip-border: rgba(96, 165, 250, 0.18);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  /* Backgrounds */
+  --bg-gradient-start: #e0e7ff;
+  --bg-gradient-mid: #f0f4ff;
+  --bg-gradient-end: #ffffff;
+  
+  /* Text Colors */
+  --text-primary: #0f172a;
+  --text-secondary: rgba(15, 23, 42, 0.86);
+  --text-muted: rgba(71, 85, 105, 0.75);
+  --text-light: rgba(51, 65, 85, 0.82);
+  
+  /* Card & Surface */
+  --card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.85) 100%);
+  --card-border: rgba(203, 213, 225, 0.5);
+  --card-highlight-bg: linear-gradient(145deg, rgba(99, 102, 241, 0.15) 0%, rgba(59, 130, 246, 0.1) 100%);
+  --surface-bg: rgba(248, 250, 252, 0.95);
+  --surface-border: rgba(203, 213, 225, 0.4);
+  
+  /* Sidebar & Content */
+  --sidebar-bg: linear-gradient(200deg, rgba(248, 250, 252, 0.98) 0%, rgba(241, 245, 249, 0.95) 100%);
+  --content-bg: rgba(255, 255, 255, 0.7);
+  --panel-bg: rgba(241, 245, 249, 0.85);
+  
+  /* Buttons */
+  --button-ghost-bg: rgba(99, 102, 241, 0.08);
+  --button-ghost-border: rgba(99, 102, 241, 0.25);
+  --button-ghost-text: #4f46e5;
+  --button-ghost-hover: rgba(99, 102, 241, 0.16);
+  
+  --button-primary-bg: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+  --button-primary-text: #ffffff;
+  --button-primary-hover-bg: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  --button-primary-shadow: rgba(99, 102, 241, 0.35);
+  
+  --button-danger-bg: rgba(239, 68, 68, 0.12);
+  --button-danger-border: rgba(239, 68, 68, 0.35);
+  
+  /* Form Elements */
+  --input-bg: rgba(255, 255, 255, 0.95);
+  --input-border: rgba(203, 213, 225, 0.5);
+  --input-border-focus: rgba(99, 102, 241, 0.45);
+  --input-text: #0f172a;
+  
+  /* Accents */
+  --accent-primary: #3b82f6;
+  --accent-secondary: #0ea5e9;
+  --accent-success: #22c55e;
+  --accent-warning: #f59e0b;
+  --accent-danger: #ef4444;
+  
+  /* Overlays */
+  --overlay-bg: rgba(15, 23, 42, 0.15);
+  --modal-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.95) 100%);
+  --shell-bg: rgba(255, 255, 255, 0.95);
+  --shell-border: rgba(203, 213, 225, 0.5);
+  
+  /* Status Colors */
+  --status-new: rgba(59, 130, 246, 0.95);
+  --status-in-progress: rgba(251, 146, 60, 0.95);
+  --status-resolved: rgba(34, 197, 94, 0.95);
+  --status-closed: rgba(100, 116, 139, 0.75);
+  
+  /* Badge Backgrounds & Colors */
+  --badge-priority-high-bg: rgba(239, 68, 68, 0.15);
+  --badge-priority-medium-bg: rgba(245, 158, 11, 0.15);
+  --badge-priority-low-bg: rgba(34, 197, 94, 0.15);
+  
+  --badge-impact-low-bg: rgba(59, 130, 246, 0.1);
+  --badge-impact-low-text: #3b82f6;
+  --badge-impact-medium-bg: rgba(245, 158, 11, 0.1);
+  --badge-impact-medium-text: #f59e0b;
+  --badge-impact-critical-bg: rgba(239, 68, 68, 0.15);
+  --badge-impact-critical-text: #ef4444;
+  
+  --badge-status-new-bg: rgba(59, 130, 246, 0.12);
+  --badge-status-in-progress-bg: rgba(99, 102, 241, 0.12);
+  --badge-status-resolved-bg: rgba(34, 197, 94, 0.12);
+  --badge-status-closed-bg: rgba(139, 92, 246, 0.12);
+  
+  /* Pills */
+  --pill-danger-bg: rgba(239, 68, 68, 0.15);
+  --pill-warning-bg: rgba(245, 158, 11, 0.15);
+  --pill-good-bg: rgba(34, 197, 94, 0.15);
+  --pill-base-bg: rgba(100, 116, 139, 0.15);
+  
+  /* Project Badge Colors */
+  --badge-good-bg: rgba(34, 197, 94, 0.15);
+  --badge-good-text: #16a34a;
+  --badge-warn-bg: rgba(245, 158, 11, 0.15);
+  --badge-warn-text: #d97706;
+  --badge-alert-bg: rgba(239, 68, 68, 0.15);
+  --badge-alert-text: #dc2626;
+  --badge-neutral-bg: rgba(100, 116, 139, 0.15);
+  --badge-neutral-text: #64748b;
+  
+  /* Additional UI Elements */
+  --progress-bar-bg: rgba(203, 213, 225, 0.4);
+  --progress-bar-fill: linear-gradient(90deg, #3b82f6 0%, #22c55e 100%);
+  --chip-bg: rgba(248, 250, 252, 0.95);
+  --chip-border: rgba(203, 213, 225, 0.5);
+}

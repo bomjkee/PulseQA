@@ -664,11 +664,11 @@ export default {
 
 .panel-header h1 {
   font-size: 1.8rem;
-  color: #f8fafc;
+  color: var(--text-primary);
 }
 
 .panel-header p {
-  color: rgba(148, 163, 184, 0.75);
+  color: var(--text-muted);
   margin-top: 0.45rem;
 }
 
@@ -681,20 +681,20 @@ export default {
 .primary {
   border-radius: 14px;
   padding: 0.65rem 1.2rem;
-  border: 1px solid rgba(96, 165, 250, 0.22);
+  border: 1px solid var(--button-ghost-border);
   background: transparent;
-  color: #cbd5f5;
+  color: var(--text-light);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: var(--transition);
 }
 
 .ghost:hover {
-  background: rgba(96, 165, 250, 0.15);
+  background: var(--button-ghost-hover);
 }
 
 .ghost.danger {
   border-color: rgba(248, 113, 113, 0.4);
-  color: #fba3a3;
+  color: var(--accent-danger);
 }
 
 .ghost.danger:hover {
@@ -702,9 +702,9 @@ export default {
 }
 
 .primary {
-  background: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
+  background: var(--button-primary-bg);
   border: none;
-  color: #081127;
+  color: var(--button-primary-text);
   font-weight: 700;
 }
 
@@ -721,43 +721,45 @@ export default {
 }
 
 .stat {
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.65) 0%, rgba(15, 23, 42, 0.38) 100%);
+  background: var(--card-bg);
   border-radius: 20px;
-  border: 1px solid rgba(148, 163, 184, 0.14);
+  border: 1px solid var(--card-border);
   padding: 1.2rem;
   display: grid;
   gap: 0.4rem;
+  transition: var(--transition);
 }
 
 .stat.accent {
-  background: linear-gradient(140deg, rgba(252, 211, 77, 0.25) 0%, rgba(248, 113, 113, 0.28) 100%);
+  background: var(--card-highlight-bg);
 }
 
 .stat .label {
   font-size: 0.8rem;
   letter-spacing: 0.4px;
   text-transform: uppercase;
-  color: rgba(203, 213, 225, 0.75);
+  color: var(--text-light);
 }
 
 .stat strong {
   font-size: 1.8rem;
-  color: #f8fafc;
+  color: var(--text-primary);
 }
 
 .stat small {
-  color: rgba(148, 163, 184, 0.75);
+  color: var(--text-muted);
   font-size: 0.85rem;
 }
 
 .filters {
-  background: rgba(12, 20, 35, 0.78);
-  border: 1px solid rgba(96, 165, 250, 0.12);
+  background: var(--panel-bg);
+  border: 1px solid var(--surface-border);
   border-radius: 20px;
   padding: 1.8rem;
   display: grid;
   gap: 1.4rem;
   margin-bottom: 2rem;
+  transition: var(--transition);
 }
 
 .filters .field {
@@ -767,16 +769,17 @@ export default {
 
 .filters label {
   font-size: 0.85rem;
-  color: rgba(203, 213, 225, 0.82);
+  color: var(--text-light);
 }
 
 .filters input,
 .filters select {
   border-radius: 12px;
-  border: 1px solid rgba(148, 163, 184, 0.22);
-  background: rgba(15, 23, 42, 0.55);
-  color: #f8fafc;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--input-text);
   padding: 0.65rem 0.9rem;
+  transition: var(--transition);
 }
 
 .filters .chips {
@@ -787,18 +790,18 @@ export default {
 
 .chip {
   border-radius: 999px;
-  border: 1px solid rgba(96, 165, 250, 0.16);
+  border: 1px solid var(--surface-border);
   background: transparent;
-  color: rgba(203, 213, 225, 0.8);
+  color: var(--text-light);
   padding: 0.45rem 0.9rem;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: var(--transition);
 }
 
 .chip.active {
-  background: rgba(96, 165, 250, 0.2);
-  color: #f8fafc;
-  border-color: rgba(96, 165, 250, 0.45);
+  background: var(--button-ghost-bg);
+  color: var(--text-primary);
+  border-color: var(--button-ghost-border);
 }
 
 .filters .inline {
@@ -812,7 +815,7 @@ export default {
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(6, 11, 20, 0.78);
+  background: var(--overlay-bg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -821,14 +824,15 @@ export default {
 }
 
 .modal-content {
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.75) 100%);
+  background: var(--modal-bg);
   border-radius: 28px;
-  border: 1px solid rgba(148, 163, 184, 0.25);
+  border: 1px solid var(--card-border);
   width: min(700px, 100%);
   padding: 2rem;
   display: grid;
   gap: 1.5rem;
-  box-shadow: 0 40px 90px rgba(2, 6, 23, 0.45);
+  box-shadow: 0 40px 90px var(--overlay-bg);
+  transition: var(--transition);
 }
 
 .modal-content header {
@@ -839,13 +843,13 @@ export default {
 
 .modal-content h3 {
   font-size: 1.4rem;
-  color: #f8fafc;
+  color: var(--text-primary);
 }
 
 .modal-content .icon {
   background: transparent;
   border: none;
-  color: rgba(148, 163, 184, 0.7);
+  color: var(--text-muted);
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -858,17 +862,18 @@ export default {
 .modal-form label {
   display: grid;
   gap: 0.5rem;
-  color: rgba(203, 213, 225, 0.8);
+  color: var(--text-light);
 }
 
 .modal-form input,
 .modal-form textarea,
 .modal-form select {
   border-radius: 14px;
-  border: 1px solid rgba(148, 163, 184, 0.25);
-  background: rgba(15, 23, 42, 0.65);
-  color: #f8fafc;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--input-text);
   padding: 0.75rem 1rem;
+  transition: var(--transition);
 }
 
 .modal-form textarea {
@@ -891,8 +896,8 @@ export default {
   text-align: center;
   padding: 3rem;
   border-radius: 20px;
-  border: 1px dashed rgba(96, 165, 250, 0.25);
-  color: rgba(148, 163, 184, 0.75);
+  border: 1px dashed var(--surface-border);
+  color: var(--text-muted);
 }
 
 .defects-list {
@@ -901,14 +906,15 @@ export default {
 }
 
 .defect-card {
-  background: linear-gradient(180deg, rgba(17, 24, 39, 0.65) 0%, rgba(17, 24, 39, 0.45) 100%);
+  background: var(--card-bg);
   padding: 1.8rem;
   border-radius: 24px;
-  border: 1px solid rgba(148, 163, 184, 0.18);
+  border: 1px solid var(--card-border);
   display: grid;
   gap: 1.3rem;
   position: relative;
   overflow: hidden;
+  transition: var(--transition);
 }
 
 .defect-card::before {
@@ -928,11 +934,11 @@ export default {
 
 .defect-card h3 {
   font-size: 1.3rem;
-  color: #f8fafc;
+  color: var(--text-primary);
 }
 
 .defect-card .meta {
-  color: rgba(148, 163, 184, 0.7);
+  color: var(--text-muted);
   font-size: 0.85rem;
   margin-top: 0.35rem;
 }
@@ -952,14 +958,14 @@ export default {
   text-transform: uppercase;
 }
 
-.badge.priority.high { background: rgba(248, 113, 113, 0.18); color: #fca5a5; }
-.badge.priority.medium { background: rgba(251, 191, 36, 0.18); color: #fcd34d; }
-.badge.priority.low { background: rgba(52, 211, 153, 0.18); color: #6ee7b7; }
+.badge.priority.high { background: rgba(248, 113, 113, 0.18); color: var(--accent-danger); }
+.badge.priority.medium { background: rgba(251, 191, 36, 0.18); color: var(--accent-warning); }
+.badge.priority.low { background: rgba(52, 211, 153, 0.18); color: var(--accent-success); }
 
-.badge.status.new { background: rgba(125, 211, 252, 0.16); color: #bae6fd; }
-.badge.status.in_progress { background: rgba(96, 165, 250, 0.16); color: #bfdbfe; }
-.badge.status.resolved { background: rgba(52, 211, 153, 0.16); color: #6ee7b7; }
-.badge.status.closed { background: rgba(233, 213, 255, 0.16); color: #c4b5fd; }
+.badge.status.new { background: rgba(125, 211, 252, 0.16); color: var(--status-new); }
+.badge.status.in_progress { background: rgba(96, 165, 250, 0.16); color: var(--status-in-progress); }
+.badge.status.resolved { background: rgba(52, 211, 153, 0.16); color: var(--status-resolved); }
+.badge.status.closed { background: rgba(233, 213, 255, 0.16); color: var(--status-closed); }
 
 .badge.impact.low { background: rgba(59, 130, 246, 0.12); color: #bfdbfe; }
 .badge.impact.medium { background: rgba(251, 191, 36, 0.12); color: #facc15; }

@@ -398,11 +398,11 @@ export default {
 
 .panel-header h1 {
   font-size: 1.8rem;
-  color: #f8fafc;
+  color: var(--text-primary);
 }
 
 .panel-header p {
-  color: rgba(148, 163, 184, 0.75);
+  color: var(--text-muted);
   margin-top: 0.45rem;
 }
 
@@ -418,36 +418,37 @@ export default {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.3px;
-  color: rgba(203, 213, 225, 0.75);
+  color: var(--text-light);
 }
 
 .controls select {
   border-radius: 12px;
-  border: 1px solid rgba(148, 163, 184, 0.3);
-  background: rgba(15, 23, 42, 0.6);
-  color: #f8fafc;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--input-text);
   padding: 0.5rem 0.9rem;
+  transition: var(--transition);
 }
 
 .ghost,
 .primary {
   border-radius: 14px;
   padding: 0.6rem 1rem;
-  border: 1px solid rgba(148, 163, 184, 0.3);
+  border: 1px solid var(--button-ghost-border);
   background: transparent;
-  color: rgba(203, 213, 225, 0.9);
+  color: var(--text-light);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: var(--transition);
 }
 
 .ghost:hover {
-  background: rgba(148, 163, 184, 0.12);
+  background: var(--button-ghost-hover);
 }
 
 .primary {
-  background: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
+  background: var(--button-primary-bg);
   border: none;
-  color: #08111f;
+  color: var(--button-primary-text);
   font-weight: 700;
 }
 
@@ -459,12 +460,13 @@ export default {
 }
 
 .card {
-  background: linear-gradient(180deg, rgba(17, 24, 39, 0.6) 0%, rgba(17, 24, 39, 0.4) 100%);
+  background: var(--card-bg);
   border-radius: 24px;
-  border: 1px solid rgba(96, 165, 250, 0.18);
+  border: 1px solid var(--surface-border);
   padding: 1.6rem;
   display: grid;
   gap: 0.6rem;
+  transition: var(--transition);
 }
 
 .card header {
@@ -477,31 +479,31 @@ export default {
   font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.3px;
-  color: rgba(203, 213, 225, 0.75);
+  color: var(--text-light);
 }
 
 .card .number {
   font-size: 2.4rem;
   font-weight: 700;
-  color: #f8fafc;
+  color: var(--text-primary);
 }
 
 .card .caption {
-  color: rgba(148, 163, 184, 0.75);
+  color: var(--text-muted);
   font-size: 0.85rem;
 }
 
 .card.highlight {
-  background: linear-gradient(145deg, rgba(59, 130, 246, 0.35) 0%, rgba(16, 185, 129, 0.25) 100%);
+  background: var(--card-highlight-bg);
 }
 
 .trend {
   font-size: 0.85rem;
 }
 
-.trend.up { color: #86efac; }
-.trend.down { color: #fca5a5; }
-.trend.neutral { color: rgba(148, 163, 184, 0.75); }
+.trend.up { color: var(--accent-success); }
+.trend.down { color: var(--accent-danger); }
+.trend.neutral { color: var(--text-muted); }
 
 .charts {
   display: grid;
@@ -527,26 +529,27 @@ export default {
 
 .bars .label {
   width: 120px;
-  color: rgba(203, 213, 225, 0.78);
+  color: var(--text-light);
 }
 
 .bar-track {
   flex: 1;
   height: 10px;
   border-radius: 999px;
-  background: rgba(148, 163, 184, 0.2);
+  background: var(--progress-bar-bg);
   overflow: hidden;
 }
 
 .bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #38bdf8 0%, #34d399 100%);
+  background: var(--progress-bar-fill);
+  transition: width 0.3s ease;
 }
 
 .bars .value {
   width: 40px;
   text-align: right;
-  color: rgba(203, 213, 225, 0.85);
+  color: var(--text-light);
 }
 
 .chips {
@@ -559,10 +562,11 @@ export default {
   display: flex;
   align-items: center;
   gap: 0.7rem;
-  background: rgba(15, 23, 42, 0.55);
+  background: var(--chip-bg);
   padding: 0.7rem 1rem;
   border-radius: 14px;
-  border: 1px solid rgba(96, 165, 250, 0.18);
+  border: 1px solid var(--chip-border);
+  transition: var(--transition);
 }
 
 .chips .dot {
@@ -571,13 +575,13 @@ export default {
   border-radius: 50%;
 }
 
-.chips .dot.high { background: #f87171; }
-.chips .dot.medium { background: #fbbf24; }
-.chips .dot.low { background: #34d399; }
+.chips .dot.high { background: var(--accent-danger); }
+.chips .dot.medium { background: var(--accent-warning); }
+.chips .dot.low { background: var(--accent-success); }
 
 .chips strong {
   margin-left: auto;
-  color: rgba(203, 213, 225, 0.9);
+  color: var(--text-light);
 }
 
 .timeline {
@@ -595,30 +599,31 @@ export default {
 
 .week-label {
   font-size: 0.75rem;
-  color: rgba(148, 163, 184, 0.75);
+  color: var(--text-muted);
 }
 
 .stack {
   width: 100%;
   height: 140px;
   border-radius: 14px;
-  background: rgba(15, 23, 42, 0.55);
-  border: 1px solid rgba(96, 165, 250, 0.2);
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-border);
   display: flex;
   flex-direction: column-reverse;
   overflow: hidden;
+  transition: var(--transition);
 }
 
 .stack-bar {
   width: 100%;
 }
 
-.stack-bar.new { background: rgba(59, 130, 246, 0.35); }
-.stack-bar.closed { background: rgba(16, 185, 129, 0.35); }
+.stack-bar.new { background: var(--accent-primary); opacity: 0.5; }
+.stack-bar.closed { background: var(--accent-success); opacity: 0.5; }
 
 .timeline .count {
   font-size: 0.85rem;
-  color: rgba(203, 213, 225, 0.85);
+  color: var(--text-light);
 }
 
 .risk-list {
@@ -632,30 +637,31 @@ export default {
   justify-content: space-between;
   align-items: center;
   gap: 1.2rem;
-  background: rgba(15, 23, 42, 0.55);
+  background: var(--chip-bg);
   border-radius: 16px;
   padding: 0.9rem 1.2rem;
-  border: 1px solid rgba(96, 165, 250, 0.18);
+  border: 1px solid var(--chip-border);
+  transition: var(--transition);
 }
 
 .risk-list .title {
-  color: #f8fafc;
+  color: var(--text-primary);
   font-weight: 600;
 }
 
 .risk-list .meta {
-  color: rgba(148, 163, 184, 0.75);
+  color: var(--text-muted);
   font-size: 0.85rem;
 }
 
 .risk-list .empty {
   justify-content: center;
-  color: rgba(148, 163, 184, 0.68);
+  color: var(--text-muted);
 }
 
 .badge.alert {
-  background: rgba(248, 113, 113, 0.2);
-  color: #fca5a5;
+  background: var(--badge-alert-bg);
+  color: var(--badge-alert-text);
   border-radius: 999px;
   padding: 0.3rem 0.8rem;
   text-transform: uppercase;

@@ -168,23 +168,24 @@ export default {
 
 .login-panel {
   width: 100%;
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.6) 100%);
+  background: var(--modal-bg);
   border-radius: 32px;
-  border: 1px solid rgba(148, 163, 184, 0.15);
+  border: 1px solid var(--card-border);
   padding: 2.5rem;
   display: grid;
   gap: 2rem;
-  box-shadow: 0 30px 60px rgba(2, 6, 23, 0.55);
+  box-shadow: 0 30px 60px var(--overlay-bg);
+  transition: var(--transition);
 }
 
 header h2 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #e2e8f0;
+  color: var(--text-primary);
 }
 
 header p {
-  color: rgba(148, 163, 184, 0.75);
+  color: var(--text-muted);
   margin-top: 0.65rem;
   font-size: 0.95rem;
 }
@@ -198,22 +199,22 @@ header p {
   display: grid;
   gap: 0.5rem;
   font-size: 0.9rem;
-  color: rgba(203, 213, 225, 0.86);
+  color: var(--text-light);
 }
 
 .field input {
   padding: 0.85rem 1rem;
   border-radius: 14px;
-  border: 1px solid rgba(148, 163, 184, 0.2);
-  background: rgba(15, 23, 42, 0.65);
-  color: #f8fafc;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--input-text);
   outline: none;
-  transition: border 0.2s ease, box-shadow 0.2s ease;
+  transition: var(--transition);
 }
 
 .field input:focus {
-  border-color: rgba(96, 165, 250, 0.45);
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+  border-color: var(--input-border-focus);
+  box-shadow: 0 0 0 2px var(--button-ghost-bg);
 }
 
 .remember {
@@ -221,18 +222,18 @@ header p {
   align-items: center;
   gap: 0.6rem;
   font-size: 0.85rem;
-  color: rgba(148, 163, 184, 0.75);
+  color: var(--text-muted);
 }
 
 button[type="submit"] {
   border: none;
   border-radius: 16px;
   padding: 0.95rem 1rem;
-  background: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
-  color: #0f172a;
+  background: var(--button-primary-bg);
+  color: var(--button-primary-text);
   font-weight: 700;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: var(--transition), transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 button[type="submit"]:hover:not(:disabled) {
@@ -246,7 +247,7 @@ button[type="submit"]:disabled {
 }
 
 .error {
-  color: #f87171;
+  color: var(--accent-danger);
   background: rgba(248, 113, 113, 0.12);
   border-radius: 14px;
   padding: 0.75rem 1rem;
@@ -263,7 +264,7 @@ button[type="submit"]:disabled {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.3px;
-  color: rgba(203, 213, 225, 0.8);
+  color: var(--text-light);
 }
 
 .quick-buttons {
@@ -276,16 +277,16 @@ button[type="submit"]:disabled {
   justify-content: space-between;
   padding: 0.85rem 1.2rem;
   border-radius: 14px;
-  border: 1px solid rgba(96, 165, 250, 0.18);
-  background: rgba(15, 23, 42, 0.55);
-  color: #e2e8f0;
+  border: 1px solid var(--surface-border);
+  background: var(--input-bg);
+  color: var(--text-primary);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: var(--transition);
 }
 
 .quick-buttons button:hover {
-  background: rgba(37, 99, 235, 0.28);
-  border-color: rgba(37, 99, 235, 0.35);
+  background: var(--button-ghost-bg);
+  border-color: var(--button-ghost-border);
 }
 
 .quick-buttons .role {
@@ -294,7 +295,7 @@ button[type="submit"]:disabled {
 
 .quick-buttons .meta {
   font-size: 0.85rem;
-  color: rgba(148, 163, 184, 0.7);
+  color: var(--text-muted);
 }
 
 @media (max-width: 480px) {

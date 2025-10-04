@@ -378,11 +378,11 @@ export default {
 
 .panel-header h1 {
   font-size: 1.8rem;
-  color: #f8fafc;
+  color: var(--text-primary);
 }
 
 .panel-header p {
-  color: rgba(148, 163, 184, 0.75);
+  color: var(--text-muted);
   margin-top: 0.35rem;
 }
 
@@ -390,8 +390,8 @@ export default {
   border: none;
   border-radius: 16px;
   padding: 0.85rem 1.4rem;
-  background: linear-gradient(135deg, #34d399 0%, #60a5fa 100%);
-  color: #041224;
+  background: var(--button-primary-bg);
+  color: var(--button-primary-text);
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -408,21 +408,21 @@ export default {
 }
 
 .project-card {
-  background: linear-gradient(180deg, rgba(17,24,39,0.6) 0%, rgba(17,24,39,0.35) 100%);
-  border: 1px solid rgba(96, 165, 250, 0.18);
+  background: var(--card-bg);
+  border: 1px solid var(--surface-border);
   border-radius: 24px;
   padding: 1.6rem;
   display: grid;
   gap: 1.1rem;
   cursor: pointer;
-  transition: transform 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
+  transition: var(--transition), transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-card.active,
 .project-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(96, 165, 250, 0.35);
-  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.45);
+  border-color: var(--button-ghost-border);
+  box-shadow: 0 14px 28px var(--overlay-bg);
 }
 
 .project-card header {
@@ -433,11 +433,11 @@ export default {
 
 .project-card h3 {
   font-size: 1.2rem;
-  color: #f8fafc;
+  color: var(--text-primary);
 }
 
 .project-card p {
-  color: rgba(148, 163, 184, 0.75);
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 
@@ -450,10 +450,10 @@ export default {
   letter-spacing: 0.4px;
 }
 
-.badge.good { background: rgba(74, 222, 128, 0.18); color: #86efac; }
-.badge.warn { background: rgba(250, 204, 21, 0.18); color: #facc15; }
-.badge.alert { background: rgba(248, 113, 113, 0.2); color: #fca5a5; }
-.badge.neutral { background: rgba(148, 163, 184, 0.18); color: #cbd5f5; }
+.badge.good { background: var(--badge-good-bg); color: var(--badge-good-text); }
+.badge.warn { background: var(--badge-warn-bg); color: var(--badge-warn-text); }
+.badge.alert { background: var(--badge-alert-bg); color: var(--badge-alert-text); }
+.badge.neutral { background: var(--badge-neutral-bg); color: var(--badge-neutral-text); }
 
 .project-card dl {
   display: grid;
@@ -465,31 +465,31 @@ export default {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.3px;
-  color: rgba(148, 163, 184, 0.7);
+  color: var(--text-muted);
 }
 
 .project-card dd {
-  color: #f8fafc;
+  color: var(--text-primary);
   font-weight: 600;
 }
 
 .progress {
   height: 8px;
   border-radius: 999px;
-  background: rgba(148, 163, 184, 0.18);
+  background: var(--progress-bar-bg);
   overflow: hidden;
 }
 
 .progress .bar {
   height: 100%;
-  background: linear-gradient(90deg, #38bdf8 0%, #34d399 100%);
+  background: var(--progress-bar-fill);
 }
 
 .project-card footer {
   display: flex;
   justify-content: space-between;
   font-size: 0.85rem;
-  color: rgba(148, 163, 184, 0.75);
+  color: var(--text-muted);
 }
 
 .project-details {
@@ -500,12 +500,13 @@ export default {
 }
 
 .card {
-  background: rgba(12, 19, 33, 0.7);
+  background: var(--surface-bg);
   border-radius: 24px;
-  border: 1px solid rgba(96, 165, 250, 0.16);
+  border: 1px solid var(--surface-border);
   padding: 1.8rem;
   display: grid;
   gap: 1.2rem;
+  transition: var(--transition);
 }
 
 .card header {
@@ -515,7 +516,7 @@ export default {
 }
 
 .card h2 {
-  color: #f8fafc;
+  color: var(--text-primary);
   font-size: 1.4rem;
 }
 
@@ -528,12 +529,12 @@ export default {
 .card .label {
   font-size: 0.75rem;
   text-transform: uppercase;
-  color: rgba(148, 163, 184, 0.66);
+  color: var(--text-muted);
   letter-spacing: 0.3px;
 }
 
 .card .description {
-  color: rgba(203, 213, 225, 0.78);
+  color: var(--text-light);
   line-height: 1.6;
 }
 
@@ -548,44 +549,50 @@ export default {
   justify-content: space-between;
   align-items: center;
   gap: 1.2rem;
-  background: rgba(15, 23, 42, 0.55);
+  background: var(--chip-bg);
   border-radius: 16px;
   padding: 0.9rem 1.2rem;
-  border: 1px solid rgba(96, 165, 250, 0.12);
+  border: 1px solid var(--chip-border);
+  transition: var(--transition);
 }
 
 .defects-list .title {
-  color: #f8fafc;
+  color: var(--text-primary);
   font-weight: 600;
 }
 
 .defects-list .meta {
-  color: rgba(148, 163, 184, 0.75);
+  color: var(--text-muted);
   font-size: 0.85rem;
 }
 
 .defects-list .deadline {
   font-size: 0.8rem;
-  color: rgba(203, 213, 225, 0.75);
+  color: var(--text-light);
 }
 
 .defects-list .empty {
   justify-content: center;
-  color: rgba(148, 163, 184, 0.75);
+  color: var(--text-muted);
 }
 
 .ghost {
-  border: 1px solid rgba(148, 163, 184, 0.3);
+  border: 1px solid var(--button-ghost-border);
   background: transparent;
-  color: rgba(203, 213, 225, 0.9);
+  color: var(--text-light);
   border-radius: 14px;
   padding: 0.6rem 1rem;
   cursor: pointer;
+  transition: var(--transition);
+}
+
+.ghost:hover {
+  background: var(--button-ghost-bg);
 }
 
 .ghost.danger {
-  border-color: rgba(248, 113, 113, 0.35);
-  color: #fca5a5;
+  border-color: var(--button-danger-border);
+  color: var(--accent-danger);
 }
 
 .buttons {
@@ -597,7 +604,8 @@ export default {
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(6, 11, 20, 0.78);
+  background: var(--overlay-bg);
+  backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -607,13 +615,14 @@ export default {
 
 .modal-content {
   width: min(640px, 100%);
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.75) 100%);
+  background: var(--modal-bg);
   border-radius: 28px;
-  border: 1px solid rgba(96, 165, 250, 0.25);
+  border: 1px solid var(--card-border);
   padding: 2rem;
   display: grid;
   gap: 1.5rem;
-  box-shadow: 0 40px 90px rgba(2, 6, 23, 0.45);
+  box-shadow: 0 40px 90px var(--overlay-bg);
+  transition: var(--transition);
 }
 
 .modal-content header {
@@ -624,15 +633,20 @@ export default {
 
 .modal-content h3 {
   font-size: 1.4rem;
-  color: #f8fafc;
+  color: var(--text-primary);
 }
 
 .modal-content .icon {
   background: transparent;
   border: none;
-  color: rgba(148, 163, 184, 0.7);
+  color: var(--text-muted);
   font-size: 1.5rem;
   cursor: pointer;
+  transition: var(--transition);
+}
+
+.modal-content .icon:hover {
+  color: var(--text-primary);
 }
 
 .modal-form {
@@ -643,16 +657,23 @@ export default {
 .modal-form label {
   display: grid;
   gap: 0.5rem;
-  color: rgba(203, 213, 225, 0.82);
+  color: var(--text-light);
 }
 
 .modal-form input,
 .modal-form textarea {
   border-radius: 14px;
-  border: 1px solid rgba(148, 163, 184, 0.25);
-  background: rgba(15, 23, 42, 0.65);
-  color: #f8fafc;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--input-text);
   padding: 0.75rem 1rem;
+  transition: var(--transition);
+}
+
+.modal-form input:focus,
+.modal-form textarea:focus {
+  outline: none;
+  border-color: var(--input-border-focus);
 }
 
 .modal-form textarea {

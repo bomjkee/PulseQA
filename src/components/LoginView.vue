@@ -298,21 +298,90 @@ button[type="submit"]:disabled {
   color: var(--text-muted);
 }
 
+@media (max-width: 640px) {
+  .login-panel {
+    padding: 1.5rem 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .login-form {
+    gap: 1rem;
+  }
+
+  .quick-login h3 {
+    font-size: 1rem;
+  }
+
+  .quick-buttons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+}
+
 @media (max-width: 480px) {
   .login-panel {
     padding: 1rem 0.5rem;
+    border-radius: 16px;
   }
+
   .login-form .field input {
     font-size: 1rem;
     padding: 0.6rem 0.7rem;
   }
+
   .quick-buttons button {
     padding: 0.6rem 0.7rem;
     font-size: 0.97rem;
   }
+
   .error {
     font-size: 0.97rem;
     padding: 0.5rem 0.7rem;
+    border-radius: 10px;
+  }
+
+  .quick-buttons {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+
+  .quick-buttons button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .login-panel {
+    padding: 0.75rem 0.4rem;
+  }
+
+  .login-form {
+    gap: 0.75rem;
+  }
+
+  .field label {
+    font-size: 0.9rem;
+  }
+
+  .field input {
+    font-size: 0.95rem;
+    padding: 0.55rem 0.65rem;
+  }
+
+  .quick-login h3 {
+    font-size: 0.9rem;
+  }
+
+  .quick-buttons button {
+    font-size: 0.9rem;
+    padding: 0.55rem 0.65rem;
+  }
+
+  .error {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
   }
 }
 </style>

@@ -41,6 +41,7 @@
             :key="item.id"
             :class="['nav-item', { active: currentView === item.id }]"
             @click="currentView = item.id"
+            :title="item.label"
           >
             <span class="nav-icon">{{ item.icon }}</span>
             <span>{{ item.label }}</span>
@@ -654,7 +655,7 @@ body {
 .nav-item {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
   padding: 0.85rem 1rem;
   border-radius: 14px;
   border: none;
@@ -958,11 +959,20 @@ body {
     overflow-x: auto;
     align-items: center;
     gap: 1.5rem;
+    padding: 1.5rem 1rem;
   }
 
   .sidebar-nav {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .nav-item {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+    min-width: 80px;
+    gap: 0.8rem;
   }
 
   .logout {
@@ -977,52 +987,273 @@ body {
 @media (max-width: 860px) {
   .landing {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .landing-intro {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .landing-intro h1 {
+    font-size: 2.2rem;
+  }
+
+  .landing-intro ul {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   .app-root {
-    padding: 1.5rem;
+    padding: 1rem;
+  }
+
+  .app-sidebar {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .sidebar-user {
+    display: none;
+  }
+
+  .brand {
+    font-size: 1rem;
   }
 }
 
+@media (max-width: 640px) {
+  .app-root {
+    padding: 0.75rem;
+  }
 
+  .landing-intro {
+    padding: 0.5rem;
+  }
+
+  .landing-intro h1 {
+    font-size: 1.8rem;
+  }
+
+  .landing-intro p {
+    font-size: 1rem;
+  }
+
+  .landing-intro ul {
+    font-size: 0.9rem;
+  }
+
+  .app-sidebar {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .sidebar-user {
+    gap: 0.6rem;
+  }
+
+  .user-badge .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .user-name {
+    font-size: 1rem;
+  }
+
+  .user-role {
+    font-size: 0.85rem;
+  }
+
+  .nav-item {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.85rem;
+    gap: 1rem;
+    min-width: 100px;
+    border-radius: 10px;
+  }
+
+  .nav-icon {
+    font-size: 1.1rem;
+  }
+
+  .logout {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .top-bar {
+    padding: 1rem 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .top-bar h2 {
+    font-size: 1.5rem;
+  }
+
+  .top-bar p {
+    font-size: 0.85rem;
+  }
+
+  .view-area {
+    padding: 0 1rem 2rem;
+  }
+}
 
 /* --- Мобильная адаптация --- */
 @media (max-width: 480px) {
   .app-root {
     padding: 0.5rem;
   }
+
+  .landing-intro {
+    padding: 0.25rem;
+  }
+
+  .landing-intro h1 {
+    font-size: 1.5rem;
+  }
+
+  .landing-intro p {
+    font-size: 0.9rem;
+  }
+
+  .landing-intro ul {
+    font-size: 0.85rem;
+    padding-left: 1rem;
+  }
+
   .app-shell {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
+
   .app-sidebar {
+    order: -1;
     min-width: 0;
-    padding: 0.5rem 0.2rem;
-    gap: 0.5rem;
+    padding: 0.75rem 0.5rem;
+    gap: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--sidebar-bg);
+    border-radius: 12px;
+    margin-bottom: 0;
+    box-shadow: 0 4px 12px var(--overlay-bg);
   }
+
+  .app-content {
+    order: 1;
+  }
+
   .sidebar-user {
     gap: 0.5rem;
   }
+
   .user-badge .avatar {
     width: 36px;
     height: 36px;
     font-size: 1rem;
   }
-  .nav-item {
-    padding: 0.5rem 0.5rem;
-    font-size: 0.85rem;
-    gap: 0.5rem;
+
+  .user-name {
+    font-size: 0.95rem;
   }
+
+  .user-role {
+    font-size: 0.85rem;
+  }
+
+  .nav-item {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    gap: 1rem;
+    min-width: 100px;
+    border-radius: 10px;
+  }
+
+  .nav-icon {
+    font-size: 1.1rem;
+  }
+
   .logout {
-    padding: 0.5rem 0.7rem;
+    padding: 0.5rem 0.8rem;
     font-size: 0.9rem;
   }
+
   .top-bar {
-    padding: 1rem 0.5rem 0.7rem;
+    padding: 1rem 0.5rem;
     flex-direction: column;
-    gap: 0.7rem;
+    gap: 0.75rem;
+    align-items: stretch;
+    background: var(--content-bg);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px var(--overlay-bg);
   }
+
+  .top-actions {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
   .view-area {
     padding: 0 0.5rem 1rem;
+  }
+
+  .demo-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .app-root {
+    padding: 0.25rem;
+  }
+
+  .landing-intro h1 {
+    font-size: 1.3rem;
+  }
+
+  .landing-intro ul {
+    font-size: 0.8rem;
+  }
+
+  .app-shell {
+    gap: 0.75rem;
+  }
+
+  .app-sidebar {
+    padding: 0.5rem 0.25rem;
+    gap: 0.5rem;
+  }
+
+  .nav-item {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.8rem;
+    gap: 0.3rem;
+    min-width: 70px;
+    border-radius: 8px;
+  }
+
+  .nav-item span:not(.nav-icon):not(.nav-counter) {
+    display: none;
+  }
+
+  .nav-icon {
+    font-size: 1rem;
+  }
+
+  .top-bar {
+    padding: 0.75rem 0.25rem;
+    gap: 0.5rem;
+  }
+
+  .view-area {
+    padding: 0 0.25rem 0.75rem;
   }
 }
 </style>

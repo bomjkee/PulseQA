@@ -1117,50 +1117,132 @@ export default {
   opacity: 0;
 }
 
+@media (max-width: 960px) {
+  .kanban-board {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .defect-card {
+    padding: 1rem;
+  }
+
+  .filters .inline {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .panel-header {
+    padding: 1rem 0.75rem;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .quick-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .kanban-board {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .defect-card {
+    padding: 0.75rem;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+    max-width: 95vw;
+  }
+
+  .modal-form {
+    gap: 1rem;
+  }
+}
+
 @media (max-width: 480px) {
   .panel-header {
     flex-direction: column;
     align-items: flex-start;
     padding: 0.7rem 0.3rem;
   }
+
   .header-actions {
     gap: 0.4rem;
     padding: 0.2rem 0;
   }
+
   .quick-stats {
     grid-template-columns: 1fr;
     gap: 0.5rem;
   }
+
   .filters {
     padding: 0.5rem 0.2rem;
   }
+
   .field input, .field select {
     font-size: 0.95rem;
     padding: 0.5rem 0.7rem;
   }
+
   .stat {
     font-size: 0.95rem;
     padding: 0.5rem 0.2rem;
   }
 
-  .panel-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .header-actions {
-    width: 100%;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .quick-stats {
+  .kanban-board {
     grid-template-columns: 1fr;
+    gap: 0.5rem;
   }
 
-  .filters .inline {
+  .defect-card {
+    padding: 0.6rem;
+    border-radius: 12px;
+  }
+
+  .defect-card h3 {
+    font-size: 1rem;
+  }
+
+  .modal-content {
+    padding: 1rem;
+    border-radius: 16px;
+  }
+
+  .modal-form {
+    gap: 0.75rem;
+  }
+
+  .field {
+    gap: 0.4rem;
+  }
+
+  .field label {
+    font-size: 0.9rem;
+  }
+
+  .field input, .field select, .field textarea {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .buttons {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .primary, .secondary {
+    width: 100%;
+    justify-content: center;
   }
 }
 </style>

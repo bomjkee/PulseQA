@@ -671,14 +671,64 @@ export default {
 @media (max-width: 960px) {
   .controls {
     flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
   }
 
   .charts {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
   }
 
   .span-2 {
     grid-column: span 1;
+  }
+
+  .card {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .panel-header {
+    padding: 1rem 0.75rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .charts {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card .number {
+    font-size: 2rem;
+  }
+
+  .timeline {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .stack {
+    height: 120px;
   }
 }
 
@@ -688,21 +738,69 @@ export default {
     align-items: flex-start;
     padding: 0.7rem 0.3rem;
   }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.4rem;
+  }
+
   .summary-grid, .charts {
     grid-template-columns: 1fr;
     gap: 0.5rem;
     padding: 0.2rem;
   }
+
   .card {
     padding: 0.7rem 0.4rem;
     font-size: 0.97rem;
+    border-radius: 12px;
   }
+
+  .card h3 {
+    font-size: 0.9rem;
+  }
+
+  .card .number {
+    font-size: 1.6rem;
+  }
+
+  .card .caption {
+    font-size: 0.8rem;
+  }
+
   .timeline {
     gap: 0.5rem;
+    padding: 0.5rem 0.2rem;
   }
+
+  .timeline-column {
+    text-align: center;
+  }
+
+  .week-label {
+    font-size: 0.7rem;
+  }
+
+  .stack {
+    height: 100px;
+    border-radius: 10px;
+  }
+
   .risk-list li {
     padding: 0.5rem 0.2rem;
     font-size: 0.95rem;
+    border-radius: 10px;
+  }
+
+  .chips {
+    gap: 0.6rem;
+    padding: 0.5rem 0.2rem;
+  }
+
+  .chips li {
+    padding: 0.5rem 0.7rem;
+    border-radius: 10px;
   }
 }
 

@@ -702,27 +702,140 @@ export default {
   opacity: 0;
 }
 
+@media (max-width: 960px) {
+  .portfolio {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-details {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .panel-header {
+    padding: 1rem 0.75rem;
+  }
+
+  .portfolio {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  .project-card dl {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .project-details {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+    max-width: 95vw;
+  }
+}
+
 @media (max-width: 480px) {
   .panel-header {
     flex-direction: column;
     align-items: flex-start;
     padding: 0.7rem 0.3rem;
   }
+
   .portfolio {
     grid-template-columns: 1fr;
     gap: 0.5rem;
     padding: 0.2rem;
   }
+
   .project-card {
     padding: 0.7rem 0.4rem;
     font-size: 0.97rem;
+    border-radius: 12px;
   }
+
+  .project-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .project-card dl {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+
+  .project-card dt {
+    font-size: 0.7rem;
+  }
+
+  .project-card dd {
+    font-size: 0.9rem;
+  }
+
   .project-details {
     grid-template-columns: 1fr;
     padding: 0.5rem 0.2rem;
+    gap: 0.75rem;
   }
+
   .card {
-    padding: 0.7rem 0.4rem;
+    padding: 0.8rem 0.5rem;
+    border-radius: 12px;
+  }
+
+  .card h2 {
+    font-size: 1rem;
+  }
+
+  .defects-list li {
+    padding: 0.6rem 0.8rem;
+    border-radius: 10px;
+  }
+
+  .modal-content {
+    padding: 1rem;
+    border-radius: 16px;
+    max-width: 98vw;
+  }
+
+  .modal-form {
+    gap: 0.75rem;
+  }
+
+  .field {
+    gap: 0.4rem;
+  }
+
+  .field label {
+    font-size: 0.9rem;
+  }
+
+  .field input, .field select, .field textarea {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .primary, .secondary, .ghost {
+    width: 100%;
+    justify-content: center;
+    padding: 0.7rem 1rem;
   }
 }
 </style>
